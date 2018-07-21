@@ -8,10 +8,10 @@ class Article(object):
         self.gender = 'el'
     def setFemale(self):
         self.gender = 'la'
-    def get(self):
+    def get(self)->str:
         return self.gender
-    def getPlural(self):
-        if[self.gender=='la']:
-            return self.gender + 's'
+    def getPlural(self)->str:
+        if self.gender=='la':
+            return '{}s'.format(self.gender)
         else:
             return 'los'
