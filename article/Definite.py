@@ -5,10 +5,10 @@ class Definite(object):
     def __init__(self,article):
         self.article = article
     def getSingular(self)->str:
-        if self.article.getGender() == 'masculino':
+        if self.article.getGender().isMale():
             return 'el'
         return 'la'
     def getPlural(self)->str:
-        if self.article.getGender() == 'masculino':
+        if self.article.getGender().isMale():
             return 'los'
         return 'las'

@@ -1,5 +1,6 @@
 from .Definite import Definite
 from .Undefinite import Undefinite
+
 class Article(object):
     """
     This class represents the ruleset of an article
@@ -11,11 +12,8 @@ class Article(object):
     def __setRuleset(self):
         self.definite = Definite(self)
         self.undefinite = Undefinite(self)
-    def setMale(self):
-        self.__gender = 'masculino'
-        self.__setRuleset()
-    def setFemale(self):
-        self.__gender = 'femenimo'
+    def setGender(self,gender):
+        self.__gender = gender
         self.__setRuleset()
     def getGender(self):
         return self.__gender
