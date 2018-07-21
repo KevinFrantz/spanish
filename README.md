@@ -1,2 +1,2 @@
 # spanish
-Represents some spanish Rulesets
+Represents some Spanish rulesets
