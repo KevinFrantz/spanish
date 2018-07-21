@@ -2,7 +2,7 @@ class Undefinite(object):
     """
     This class represents an undefinite article
     """
-    def __init__(self,article):
+    def __init__(self,article:object):
         self.article = article
     def getSingular(self)->str:
         if self.article.getGender().isMale():
