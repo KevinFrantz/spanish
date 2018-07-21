@@ -1,4 +1,4 @@
-class Article:
+class Article(object):
     """
     This class represents an article
     """
