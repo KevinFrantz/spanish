@@ -2,13 +2,16 @@ from article.Article import Article
 """
     Overview over the articles:
 """
-print ('Article:')
+print ('artìculo:')
 article = Article()
+def articleSpecific(article:Article,kind:str):
+    print('artículo {0}: {1}'.format(kind,article.getSingular()))
+    print('artículo {0}: {1}'.format(kind,article.getPlural()))
 def articleOverview(article:Article,gender:str):
     print ('{}:'.format(gender))
-    print(article.get())
-    print(article.getPlural())
+    articleSpecific(article.getDefinite(),'específico')
+    articleSpecific(article.getUndefinite(),'indefinido')
 article.setMale()
-articleOverview(article,'male')
+articleOverview(article,'masculino')
 article.setFemale()
-articleOverview(article,'female')
+articleOverview(article,'feminimo')
