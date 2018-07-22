@@ -37,3 +37,6 @@ for name in ['libro','casa']:
 print('substantivos irregulares:\n')
 for name in ['moto','mano','foto','radio','problema','dìa','mapa','idioma']:
     printNoun(name)
+print('substantivos de dos generòs:\n')
+for name in ['periodista','cantante']:
+    printNoun(name)

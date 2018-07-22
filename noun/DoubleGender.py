@@ -7,8 +7,8 @@ class DoubleGender(Irregular):
     This class represents words which contain two genders
     """
     def __init__(self,noun:str):
-        super(self).__init__(noun,Male())
-        self.__second_article = Female()
+        super().__init__(noun,Article(Male()))
+        self.__second_article = Article(Female())
     def getSecondArticle(self)->Article:
         return self.__second_article
     @staticmethod
