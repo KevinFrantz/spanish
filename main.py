@@ -2,7 +2,7 @@ from article.Article import Article
 from gender.Gender import Gender
 from gender.Male import Male
 from gender.Female import Female
-from noun.Noun import Noun
+from noun.Controller import Controller as NounController
 
 """
     Overview over the articles:
@@ -23,7 +23,8 @@ articleOverview(Article(Male()))
 """
 print ('\nsubstantivos:\n')
 def printNoun(name:str):
-    noun = Noun(name)
+    nounController = NounController(name)
+    noun = nounController.getNoun()
     print('{0}:'.format(name));
     print ('específico singular\t{0} {1}'.format(noun.getArticle().getDefinite().getSingular(),noun.getNoun()))
     print ('específico plural\t{0} {1}'.format(noun.getArticle().getDefinite().getPlural(),noun.getPlural()))
