@@ -21,7 +21,7 @@ articleOverview(Article(Male()))
 """
     Overview over the Nouns
 """
-print ('\nSubstantivos:\n')
+print ('\nsubstantivos:\n')
 def printNoun(name:str):
     noun = Noun(name)
     print('{0}:'.format(name));
@@ -30,6 +30,9 @@ def printNoun(name:str):
     print ('indefinido singular\t{0} {1}'.format(noun.getArticle().getUndefinite().getSingular(),noun.getNoun()))
     print ('indefinido plural\t{0} {1}'.format(noun.getArticle().getUndefinite().getPlural(),noun.getPlural()))
     print()
-print('Substantivos regulares:\n')
+print('substantivos regulares:\n')
 for name in ['libro','casa']:
+    printNoun(name)
+print('substantivos irregulares:\n')
+for name in ['moto','mano','foto','radio','problema','dìa','mapa','idioma']:
     printNoun(name)

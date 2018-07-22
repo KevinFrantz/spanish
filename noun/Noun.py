@@ -7,16 +7,24 @@ class Noun(object):
     """
     def __init__(self,noun:str):
         self.__noun = noun
+        self.__laExceptions = ['moto','mano','foto','radio']
+        self.__elExceptions = ['problema','dìa','mapa','idioma']
         self.__gender = None
         self.__setGenderRoutine()
         self.__article = Article(self.__gender)
     def __setGenderRoutine(self):
         last_letter = self.__noun[-1:]
         if last_letter == 'a':
-            self.__gender = Female()
+            if self.__noun in self.__elExceptions:
+                self.__gender = Male()
+            else:
+                self.__gender = Female()
             return
         if last_letter == 'o':
-            self.__gender = Male()
+            if self.__noun in self.__laExceptions:
+                self.__gender = Female()
+            else:
+                self.__gender = Male()
             return
         raise Exception('The gender could not be defined!')
     def getNoun(self)->str:
